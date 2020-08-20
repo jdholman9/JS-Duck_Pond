@@ -3,6 +3,7 @@ var dirc = 0;
 var rota = 1;
 var rl = 1;
 var ran = [10, 35, 70]
+var dist;
 
 /**
  * attack function:  what to do when scan is picked up
@@ -11,11 +12,11 @@ var ran = [10, 35, 70]
  *        rl (global - rotation of scanner)
  *        rota (global - rotation of duck around enemy)
  */
-function attack(ran) {
-  cannon(dirc, scan(dirc));
-  if(scan(dirc) < ran[0]){
+function attack(ran, dist) {
+  cannon(dirc, dist);
+  if(dist < ran[0]){
     swim(dirc + 180);
-  }else if(scan(dirc) < ran[1]) {
+  }else if(dist < ran[1]) {
     swim(dirc + rl*90);
   } else {
     swim(dirc, 100);
@@ -25,8 +26,9 @@ function attack(ran) {
 
 
 while(true){
-  if(scan(dirc) < 70){
-    attack(ran)
+  dist = scan(dirc);
+  if(dist < 70){
+    attack(ran, dist)
   }
   if(speed() == 0){
     swim(Math.random()*360)
