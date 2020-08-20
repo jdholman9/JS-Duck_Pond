@@ -1,7 +1,7 @@
 
 var dirc = 0;
-var rota = 1;
-var rl = 1;
+var rota = (Math.random() < .5 ? 1 : -1);
+var rl = (Math.random() < .5 ? 1 : -1);
 var ran = [10, 35, 70]
 var dist;
 
