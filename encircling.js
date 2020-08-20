@@ -9,8 +9,8 @@ var dist;
  * attack function:  what to do when scan is picked up
  * input: ran list of 3 distances (close, medium, far)
  *        dirc (global - direction of scan)
- *        rl (global - rotation of scanner)
- *        rota (global - rotation of duck around enemy)
+ *        rl (global - rotation of duck around enemy)
+ *        rota (global - rotation of scanner)
  */
 function attack(ran, dist) {
   cannon(dirc, dist);
