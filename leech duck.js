@@ -1,13 +1,14 @@
 var dirc = Math.random()*360;
 var dist;
 var rota = -1;
+var swm_spd = 20
 
-swim(dirc);
+swim(dirc, swm_spd);
 while(true){
   dist = scan(dirc);
   while(dist <= 70){
-    swim(dirc);
-    if(dist < 20){
+    swim(dirc, swm_spd);
+    if(dist < 10){
       cannon(dirc, dist);
     }
     //dirc = dirc - rota*35;
@@ -20,6 +21,6 @@ while(true){
   }
   
   if(speed() == 0 & dist > 20){
-    swim(Math.random()*360)
+    swim(Math.random()*360, swm_spd)
   }
 }
