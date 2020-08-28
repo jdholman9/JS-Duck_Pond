@@ -13,6 +13,9 @@ while(true){
       cannon(dirc, dist);
     }
     dist = scan(dirc)
+    if(speed() == 0 & dist > 20){
+      dirc = dirc + 180;
+    }
   }
   if(scan(dirc - rota*5) <= 70){
     dirc = dirc - rota*5;
