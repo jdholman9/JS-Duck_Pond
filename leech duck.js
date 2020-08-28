@@ -1,7 +1,8 @@
-var dirc = Math.random()*360;
-var dist;
-var rota = 1;
-var swm_spd = 30;
+var dirc, dist, rota, swm_spd;
+
+dirc = Math.random()*360;
+rota = 1;
+swm_spd = 30;
 
 swim(dirc, swm_spd);
 while(true){
