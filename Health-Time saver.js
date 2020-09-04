@@ -1,6 +1,6 @@
 var dirc, dist, wbuff, swm_spd, tm_arnd, rota;
 
-dirc = 0;
+dirc = 180;
 wbuff = 17;
 swm_spd = 100;
 tm_arnd = 0;
@@ -50,7 +50,7 @@ while(true){
     }
   }
   tm_arnd += 1;
-  while(tm_arnd == 3){
+  while(tm_arnd == 4){
     dist = scan(dirc);
     while(dist <= 70){
       swim(dirc, swm_spd);
